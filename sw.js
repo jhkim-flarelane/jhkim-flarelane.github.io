@@ -1,1 +1,1 @@
-importScripts("https://cdn.flarelane.com/sw.js");
+importScripts("https://cdn.flarelane.com/sw-staging.js");
