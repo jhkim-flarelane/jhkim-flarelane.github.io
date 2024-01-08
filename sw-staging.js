@@ -1,1 +1,1 @@
-importScripts("https://cdn.flarelane.com/sw-staging.js");
+importScripts("https://cdn.flarelane.com/ServiceWorker-staging.js");
