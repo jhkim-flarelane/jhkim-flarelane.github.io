@@ -34,10 +34,21 @@ function mixpanelRegister() {
   });
 }
 </script>
-<button type = "button" id="amplitude-track" onClick="amplitudeTrack()">Amplitude track</button>
+<button type="button" id="amplitude-track" onClick="amplitudeTrack()">Amplitude track</button>
 <script>
 function amplitudeTrack() {
   amplitude.track('Page View', { time: new Date().valueOf() });
+}
+</script>
+
+<button type="button" id="amplitude-random-device" onClick="amplitudeRandom()">Amplitude random track</button>
+<script>
+function amplitudeTrack() {
+  const randomDeviceID = crypto.randomUUID();
+  const randomUserID = crypto.randomUUID();
+  amplitude.setUserId(randomUserID);
+  amplitude.setDeviceId(randomDeviceID);
+  amplitude.track('Random button', { time: new Date().valueOf() });
 }
 </script>
 <body>
