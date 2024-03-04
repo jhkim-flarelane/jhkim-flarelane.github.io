@@ -48,7 +48,7 @@ function amplitudeRandom() {
   const randomUserID = crypto.randomUUID();
   amplitude.setUserId(randomUserID);
   amplitude.setDeviceId(randomDeviceID);
-  amplitude.track('Random button', { time: new Date().valueOf() });
+  amplitude.track('Random button', { time: new Date().valueOf(), source: 'flarelane' });
 }
 </script>
 <body>
