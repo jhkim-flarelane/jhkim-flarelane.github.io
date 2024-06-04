@@ -51,6 +51,18 @@ function amplitudeRandom() {
   amplitude.track('Random button', { time: new Date().valueOf(), source: 'flarelane' });
 }
 </script>
+<button type = "button" id="flarelane-set-userid" onClick="flarelaneSetUserId()">Flarelane setUserId</button>
+<script>
+function flarelaneSetUserId() {
+  Flarelane.setUserId("jh_kim");
+}
+</script>
+<button type = "button" id="flarelane-un-set-userid" onClick="flarelaneSetUserId()">Flarelane unSetUserId</button>
+<script>
+function flarelaneSetUserId() {
+  Flarelane.setUserId(null);
+}
+</script>
 <body>
 Hello world!
 </body>
