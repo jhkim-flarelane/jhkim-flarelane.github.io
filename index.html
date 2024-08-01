@@ -51,16 +51,23 @@ function amplitudeRandom() {
   amplitude.track('Random button', { time: new Date().valueOf(), source: 'flarelane' });
 }
 </script>
-<button type = "button" id="flarelane-set-userid" onClick="flareLaneSetUserId()">FlareLane setUserId</button>
+<button type = "button" id="flarelane-set-userid-rand" onClick="flareLaneSetUserIdRandomUUID()">FlareLane setUserId(RandomUUID)</button>
 <script>
-function flareLaneSetUserId() {
-  FlareLane.setUserId("jh_kim");
+function flareLaneSetUserIdRandomUUID() {
+  //FlareLane.setUserId("jh_kim");
+  FlareLane.setUserId(crypto.randomUUID());
 }
 </script>
-<button type = "button" id="flarelane-un-set-userid" onClick="flareLaneSetUserId()">FlareLane unSetUserId</button>
+<button type = "button" id="flarelane-un-set-userid" onClick="flareLaneSetUserId()">FlareLane unSetUserId(Null)</button>
 <script>
 function flareLaneSetUserId() {
   FlareLane.setUserId(null);
+}
+</script>
+<button type = "button" id="flarelane-set-userid-jh.kim" onClick="flareLaneSetUserIdRandomUUID()">FlareLane setUserId(jh.kim)</button>
+<script>
+function flareLaneSetUserIdRandomUUID() {
+  FlareLane.setUserId("jh.kim");
 }
 </script>
 <body>
